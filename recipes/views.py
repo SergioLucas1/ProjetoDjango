@@ -1,3 +1,4 @@
+from multiprocessing import context
 from unicodedata import name
 
 from django.http import HttpResponse
@@ -7,7 +8,9 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request, 'recipes/home.html')
+    return render(request, 'recipes/home.html', context={
+        'name': 'Sergio Lucas',
+    })
 
 
 def sobre(request):
