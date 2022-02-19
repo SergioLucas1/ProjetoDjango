@@ -11,3 +11,9 @@ def home(request):
     return render(request, 'recipes/pages/home.html', context={
         'name': 'Sergio Lucas',
     })
+
+
+def recipe(request):
+    return render(request, 'recipes/pages/home.html', context={
+        'name': 'Sergio Lucas',
+    })
